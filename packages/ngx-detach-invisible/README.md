@@ -12,3 +12,8 @@ To use this library simply add `@DetachInvisible()` decorator on you component's
 })
 export class DemoComponent { }
 ```
+
+## TODO
+
+- [ ] This works for components extended from base class (need to check)
+- [ ] Provide example app on Stackblitz
