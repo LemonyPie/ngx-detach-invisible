@@ -1,0 +1,8 @@
+<button (click)="isChildVisible = !isChildVisible">Toggle</button>
+<ng-container *ngIf="isChildVisible">
+  <ngx-detach-invisible-emoji-counter
+    *ngFor="let name of names"
+    [name]="name"
+    [count]="count"
+  ></ngx-detach-invisible-emoji-counter>
+</ng-container>
