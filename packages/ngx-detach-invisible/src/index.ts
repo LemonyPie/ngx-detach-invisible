@@ -1,1 +1,2 @@
-export * from './lib/ngx-detach-invisible.module';
+export * from './lib/detach-invisible.service';
+export * from './lib/detach-invisible.const';
