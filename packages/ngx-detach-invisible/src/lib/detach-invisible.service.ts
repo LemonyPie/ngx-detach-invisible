@@ -52,8 +52,16 @@ export class DetachInvisibleService implements OnDestroy {
   }
 
   private processEntries(entries: IntersectionObserverEntry[]): void {
-    entries.forEach(({target, isIntersecting}: IntersectionObserverEntry) => {
-      console.log(target, isIntersecting);
+    entries.forEach(({target, isIntersecting}: IntersectionObserverEntry): void => {
+      if (!this.observables.has(target)) { return; }
+
+      const cdr: ChangeDetectorRef = <ChangeDetectorRef>this.observables.get(target); // already checked if object is present
+      if (isIntersecting) {
+        cdr.reattach();
+        cdr.markForCheck();
+      } else {
+        cdr.detach();
+      }
     })
   }
 }
