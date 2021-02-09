@@ -15,6 +15,10 @@
       "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": { "ngx-detach-invisible": { "tags": [] } },
+  "projects": {
+    "ngx-detach-invisible": { "tags": [] },
+    "demo": { "tags": [] },
+    "demo-e2e": { "tags": [], "implicitDependencies": ["demo"] }
+  },
   "workspaceLayout": { "appsDir": "packages", "libsDir": "packages" }
 }
