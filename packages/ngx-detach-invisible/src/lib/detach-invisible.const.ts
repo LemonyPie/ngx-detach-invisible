@@ -9,3 +9,5 @@ export interface IDetachInvisibleConfig {
 export const DEFAULT_DETACH_INVISIBLE_CONFIG: IDetachInvisibleConfig = {
   threshold: 0.2
 }
+
+export const UnobserveSymbol = Symbol('unobserve');
