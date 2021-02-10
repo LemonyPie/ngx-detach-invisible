@@ -12,6 +12,20 @@ To use this library simply add `@DetachInvisible()` decorator on you component's
 })
 export class DemoComponent { }
 ```
+And put `DetachInvisibleService` to your `AppModule` providers:
+
+```angular2
+@NgModule({
+  /* ... */
+  providers: [
+    DetachInvisibleService
+  ],
+  bootstrap: [AppComponent],
+})
+export class AppModule { }
+
+```
+
 
 ## TODO
 
