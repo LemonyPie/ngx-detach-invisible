@@ -8,10 +8,8 @@ import {DetachInvisible} from '../../../../ngx-detach-invisible/src/lib/detach-i
   styleUrls: ['./emoji-counter.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EmojiCounterComponent implements OnChanges {
+export class EmojiCounterComponent {
   @Input() public readonly name: string = 'Hello World Component';
 
   @Input() public readonly count: number = 0;
-
-  @Input() public readonly count = 0;
 }
