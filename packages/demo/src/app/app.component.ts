@@ -31,4 +31,8 @@ export class AppComponent implements OnInit, OnDestroy {
   public ngOnDestroy() {
     clearInterval(this.intervalId);
   }
+
+  public trackBy(index: number, name: string): string {
+    return name;
+  }
 }
