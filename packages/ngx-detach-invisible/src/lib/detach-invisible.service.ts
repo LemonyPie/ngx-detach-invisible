@@ -2,8 +2,8 @@ import {ChangeDetectorRef, ElementRef, Inject, Injectable, OnDestroy, Optional} 
 import {
   DEFAULT_DETACH_INVISIBLE_CONFIG,
   DETACH_INVISIBLE_CONFIG,
-  IDetachInvisibleConfig
 } from './detach-invisible.const';
+import {IDetachInvisibleConfig} from "./detach-invisible.types";
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +16,7 @@ export class DetachInvisibleService implements OnDestroy {
   constructor(
     @Optional() @Inject(DETACH_INVISIBLE_CONFIG) private readonly config: IDetachInvisibleConfig
   ) {
-    if (config == null) {
-      this.config = DEFAULT_DETACH_INVISIBLE_CONFIG;
-    }
+    if (config == null) { this.config = DEFAULT_DETACH_INVISIBLE_CONFIG; }
 
     this.observer = new IntersectionObserver(
       this.processEntries.bind(this), {
