@@ -1,8 +1,28 @@
-<button (click)="isChildVisible = !isChildVisible">Toggle</button>
-<ng-container *ngIf="isChildVisible">
-  <ngx-detach-invisible-emoji-counter
-    *ngFor="let name of names; trackBy: trackBy"
-    [name]="name"
+<demo-emoji-counter
+  *ngFor="let name of names; trackBy: trackBy"
+  detach-invisible
+  [name]="name"
+  [count]="count"
+></demo-emoji-counter>
+<demo-emoji-counter
+  *ngIf="true"
+  detach-invisible
+  name="📣"
+  [count]="count"
+></demo-emoji-counter>
+<demo-emoji-counter
+  detach-invisible
+  name="👽"
+  [count]="count"
+></demo-emoji-counter>
+<demo-heavy-computation
+  detach-invisible
+  [count]="count"
+></demo-heavy-computation>
+<demo-wrapper>
+  <demo-emoji-counter
+    detach-invisible
+    name="🤷🏼‍️"
     [count]="count"
-  ></ngx-detach-invisible-emoji-counter>
-</ng-container>
+  ></demo-emoji-counter>
+</demo-wrapper>

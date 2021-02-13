@@ -44,7 +44,7 @@
       "projectType": "application",
       "root": "packages/demo",
       "sourceRoot": "packages/demo/src",
-      "prefix": "ngx-detach-invisible",
+      "prefix": "demo",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
@@ -179,7 +179,8 @@
       "strict": true
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush"
     }
   },
   "defaultProject": "ngx-detach-invisible"
