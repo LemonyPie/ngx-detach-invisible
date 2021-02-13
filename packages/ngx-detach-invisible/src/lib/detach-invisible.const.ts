@@ -1,8 +1,7 @@
-import {InjectionToken} from '@angular/core';
+import {InjectionToken, isDevMode} from '@angular/core';
 import {IDetachInvisibleConfig} from "./detach-invisible.types";
-import {environment} from "../../../demo/src/environments/environment";
 
-export const PROD_MODE = environment.production;
+export const PROD_MODE = !isDevMode();
 
 export const DETACH_INVISIBLE_CONFIG = new InjectionToken<IDetachInvisibleConfig>('DetachInvisibleConfig');
 
