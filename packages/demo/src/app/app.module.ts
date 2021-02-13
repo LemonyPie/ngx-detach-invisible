@@ -7,14 +7,23 @@ import { EmojiCounterComponent } from './emoji-counter/emoji-counter.component';
 import { HeavyComputationComponent } from './heavy-computation/heavy-computation.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import {DetachInvisibleModule, DetachInvisibleService} from "ngx-detach-invisible";
+import {EmojiCounterDetachInvisibleComponent} from "./emoji-counter/emoji-counter-detach-invisible.component";
+import {EmojiCounterDetachInvisibleDecoratorComponent} from "./emoji-counter/emoji-counter-detach-invisible-decorator.component";
 
 @NgModule({
-  declarations: [AppComponent, EmojiCounterComponent, HeavyComputationComponent, WrapperComponent],
-    imports: [
-        BrowserModule,
-        RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-        DetachInvisibleModule,
-    ],
+  declarations: [
+    AppComponent,
+    EmojiCounterComponent,
+    EmojiCounterDetachInvisibleComponent,
+    EmojiCounterDetachInvisibleDecoratorComponent,
+    HeavyComputationComponent,
+    WrapperComponent
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    DetachInvisibleModule,
+  ],
   providers: [
     DetachInvisibleService,
   ],

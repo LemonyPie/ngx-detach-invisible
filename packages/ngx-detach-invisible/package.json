@@ -1,6 +1,6 @@
 {
   "name": "ngx-detach-invisible",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Allows to detach computation heavy components from Angular change detection mechanism if they are not visible in viewport",
   "keywords": ["angular", "ngx-detach-invisible", "detach", "invisible", "directive", "optimization"],
   "homepage": "https://github.com/ArtemeeSenin/ngx-detach-invisible/blob/master/packages/ngx-detach-invisible/README.md",

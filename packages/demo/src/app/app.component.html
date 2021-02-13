@@ -4,12 +4,14 @@
   [name]="name"
   [count]="count"
 ></demo-emoji-counter>
-<demo-emoji-counter
-  *ngIf="true"
-  detach-invisible
+<demo-emoji-counter-detach-invisible
   name="📣"
   [count]="count"
-></demo-emoji-counter>
+></demo-emoji-counter-detach-invisible>
+<demo-emoji-counter-detach-invisible-decorator
+  name="🤖"
+  [count]="count"
+></demo-emoji-counter-detach-invisible-decorator>
 <demo-emoji-counter
   detach-invisible
   name="👽"

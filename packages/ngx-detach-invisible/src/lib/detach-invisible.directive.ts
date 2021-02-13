@@ -18,7 +18,7 @@ export class DetachInvisibleDirective implements OnInit, OnDestroy {
   ) {
   }
 
-  [UnobserveSymbol]() {};
+  [UnobserveSymbol]() { };
 
   public ngOnInit() {
     const unobserve = this.detachInvisibleService.observe(
