@@ -1,16 +1,12 @@
 # ngx-detach-invisible
 
-To use this library simply add `@DetachInvisible()` decorator on you component's class
+To use this library simply add `detach-invisible` directive on your component in template
 
 ```angular2
-@DetachInvisible()
-@Component({
-  selector: 'ngx-detach-invisible-demo-component',
-  templateUrl: './ngx-detach-invisible-demo-component.component.html',
-  styleUrls: ['./ngx-detach-invisible-demo-component.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
-export class DemoComponent { }
+<demo-heavy-computation
+  detach-invisible
+  [count]="count"
+></demo-heavy-computation>
 ```
 And put `DetachInvisibleService` to your `AppModule` providers:
 
@@ -29,5 +25,4 @@ export class AppModule { }
 
 ## TODO
 
-- [ ] This works for components extended from base class (need to check)
 - [ ] Provide example app on Stackblitz
