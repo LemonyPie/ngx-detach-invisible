@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "ngx-detach-invisible": ["packages/ngx-detach-invisible/src/public_api.ts"]
+      "ngx-detach-invisible": ["packages/ngx-detach-invisible/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
